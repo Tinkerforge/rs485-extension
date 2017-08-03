@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:tinkerforge
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,8 +29,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:tinkerforge
-LIBS:rs485-extension-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -45,16 +43,14 @@ Comment2 "Copyright (©) 2015, B.Nordmeyer <bastian@tinkerforge.com>"
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 8600 6200 0    40   ~ 0
+Text Notes 8700 6450 0    40   ~ 0
 Copyright Tinkerforge GmbH 2015.\nThis documentation describes Open Hardware and is licensed under the\nCERN OHL v. 1.1.\nYou may redistribute and modify this documentation under the terms of the\nCERN OHL v.1.1. (http://ohwr.org/cernohl). This documentation is distributed\nWITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF\nMERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A\nPARTICULAR PURPOSE. Please see the CERN OHL v.1.1 for applicable\nconditions\n
 Wire Wire Line
-	10450 4900 10450 4800
+	10450 4250 10450 4150
 Wire Wire Line
-	10450 3850 10450 3800
+	10450 3200 10450 3150
 Wire Wire Line
-	6800 4200 6800 3800
-Wire Wire Line
-	6800 3800 7150 3800
+	6800 3600 6800 4250
 Connection ~ 5950 3700
 Wire Wire Line
 	5950 3700 6000 3700
@@ -87,49 +83,49 @@ Wire Wire Line
 Wire Wire Line
 	5950 3900 7300 3900
 Wire Wire Line
-	10450 4300 10450 4250
+	10450 3650 10450 3600
 $Comp
 L 3V3 #PWR01
 U 1 1 4E0F3FCA
-P 10450 3800
-F 0 "#PWR01" H 10450 3900 40  0001 C CNN
-F 1 "3V3" H 10450 3925 40  0000 C CNN
-F 2 "" H 10450 3800 60  0001 C CNN
-F 3 "" H 10450 3800 60  0001 C CNN
-	1    10450 3800
+P 10450 3150
+F 0 "#PWR01" H 10450 3250 40  0001 C CNN
+F 1 "3V3" H 10450 3275 40  0000 C CNN
+F 2 "" H 10450 3150 60  0001 C CNN
+F 3 "" H 10450 3150 60  0001 C CNN
+	1    10450 3150
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR02
 U 1 1 4E0F3FC6
-P 10450 4900
-F 0 "#PWR02" H 10450 4900 30  0001 C CNN
-F 1 "GND" H 10450 4830 30  0001 C CNN
-F 2 "" H 10450 4900 60  0001 C CNN
-F 3 "" H 10450 4900 60  0001 C CNN
-	1    10450 4900
+P 10450 4250
+F 0 "#PWR02" H 10450 4250 30  0001 C CNN
+F 1 "GND" H 10450 4180 30  0001 C CNN
+F 2 "" H 10450 4250 60  0001 C CNN
+F 3 "" H 10450 4250 60  0001 C CNN
+	1    10450 4250
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R2
 U 1 1 4E0F3FB5
-P 10450 4550
-F 0 "R2" V 10530 4550 50  0000 C CNN
-F 1 "1k" V 10450 4550 50  0000 C CNN
-F 2 "kicad-libraries:D0603" H 10450 4550 60  0001 C CNN
-F 3 "" H 10450 4550 60  0001 C CNN
-	1    10450 4550
+P 10450 3900
+F 0 "R2" V 10530 3900 50  0000 C CNN
+F 1 "1k" V 10450 3900 50  0000 C CNN
+F 2 "kicad-libraries:R0603" H 10450 3900 60  0001 C CNN
+F 3 "" H 10450 3900 60  0001 C CNN
+	1    10450 3900
 	1    0    0    -1  
 $EndComp
 $Comp
 L LED D1
 U 1 1 4E0F3FAF
-P 10450 4050
-F 0 "D1" H 10450 4150 50  0000 C CNN
-F 1 "LED" H 10450 3950 50  0000 C CNN
-F 2 "kicad-libraries:0603" H 10450 4050 60  0001 C CNN
-F 3 "" H 10450 4050 60  0001 C CNN
-	1    10450 4050
+P 10450 3400
+F 0 "D1" H 10450 3500 50  0000 C CNN
+F 1 "LED" H 10450 3300 50  0000 C CNN
+F 2 "kicad-libraries:D0603" H 10450 3400 60  0001 C CNN
+F 3 "" H 10450 3400 60  0001 C CNN
+	1    10450 3400
 	0    1    1    0   
 $EndComp
 Text GLabel 3300 4100 0    60   Input ~ 0
@@ -137,12 +133,12 @@ RXE
 $Comp
 L GND #PWR03
 U 1 1 4D2D54FF
-P 6800 4200
-F 0 "#PWR03" H 6800 4200 30  0001 C CNN
-F 1 "GND" H 6800 4130 30  0001 C CNN
-F 2 "" H 6800 4200 60  0001 C CNN
-F 3 "" H 6800 4200 60  0001 C CNN
-	1    6800 4200
+P 6800 4250
+F 0 "#PWR03" H 6800 4250 30  0001 C CNN
+F 1 "GND" H 6800 4180 30  0001 C CNN
+F 2 "" H 6800 4250 60  0001 C CNN
+F 3 "" H 6800 4250 60  0001 C CNN
+	1    6800 4250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -177,7 +173,7 @@ U 1 1 4CCE87A0
 P 8500 3350
 F 0 "R1" V 8580 3350 50  0000 C CNN
 F 1 "120" V 8500 3350 50  0000 C CNN
-F 2 "kicad-libraries:0603" H 8500 3350 60  0001 C CNN
+F 2 "kicad-libraries:R0603" H 8500 3350 60  0001 C CNN
 F 3 "" H 8500 3350 60  0001 C CNN
 	1    8500 3350
 	-1   0    0    1   
@@ -205,7 +201,7 @@ U 1 1 4CC0508F
 P 6200 3700
 F 0 "C2" V 6250 3800 50  0000 L CNN
 F 1 "100nF" V 6050 3700 50  0000 L CNN
-F 2 "kicad-libraries:0603" H 6200 3700 60  0001 C CNN
+F 2 "kicad-libraries:C0603" H 6200 3700 60  0001 C CNN
 F 3 "" H 6200 3700 60  0001 C CNN
 	1    6200 3700
 	0    -1   -1   0   
@@ -229,7 +225,7 @@ U 1 1 4CC04ECD
 P 5850 4800
 F 0 "C1" V 5900 4900 50  0000 L CNN
 F 1 "100nF" V 5700 4800 50  0000 L CNN
-F 2 "kicad-libraries:0603" H 5850 4800 60  0001 C CNN
+F 2 "kicad-libraries:C0603" H 5850 4800 60  0001 C CNN
 F 3 "" H 5850 4800 60  0001 C CNN
 	1    5850 4800
 	0    -1   -1   0   
@@ -371,9 +367,7 @@ Wire Wire Line
 Wire Wire Line
 	7150 4200 7150 4000
 Wire Wire Line
-	7150 3800 7150 3600
-Wire Wire Line
-	7150 3600 7300 3600
+	6800 3600 7300 3600
 NoConn ~ 8000 4500
 NoConn ~ 7300 4500
 Wire Wire Line
@@ -416,12 +410,6 @@ Wire Wire Line
 Wire Wire Line
 	3600 4300 3300 4300
 Wire Wire Line
-	4200 4100 4700 4100
-Wire Wire Line
-	4700 4100 4700 3900
-Wire Wire Line
-	4700 3900 5250 3900
-Wire Wire Line
 	3600 4100 3300 4100
 $Comp
 L GND #PWR010
@@ -451,11 +439,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 3800 3300 3800
 Wire Wire Line
-	4200 3900 4600 3900
-Wire Wire Line
-	4600 3900 4600 3800
-Wire Wire Line
-	4600 3800 5250 3800
+	4200 3900 4700 3900
 Wire Wire Line
 	4400 5200 4400 3800
 Wire Wire Line
@@ -466,4 +450,14 @@ NoConn ~ 4200 4200
 NoConn ~ 3600 4200
 NoConn ~ 3600 4000
 NoConn ~ 4200 4000
+Wire Wire Line
+	4200 4100 4850 4100
+Wire Wire Line
+	4850 4100 4850 3900
+Wire Wire Line
+	4850 3900 5250 3900
+Wire Wire Line
+	4700 3900 4700 3800
+Wire Wire Line
+	4700 3800 5250 3800
 $EndSCHEMATC
